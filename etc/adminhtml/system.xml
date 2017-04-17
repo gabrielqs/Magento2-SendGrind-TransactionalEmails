@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <section id="system">
+            <group id="smtp">
+                <field id="provider" translate="label" type="select" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Provider</label>
+                    <source_model>Gabrielqs\TransactionalEmails\Model\Source\Provider</source_model>
+                </field>
+                <field id="sendgrid_apikey" translate="label" type="text" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Key</label>
+                    <depends>
+                        <field id="*/*/provider">sendgrid</field>
+                    </depends>
+                </field>
+                <field id="test_email_recipient" translate="label" type="text" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send test email to</label>
+                    <depends>
+                        <field id="*/*/provider">sendgrid</field>
+                    </depends>
+                </field>
+                <field id="send_email" translate="button_label" type="button" sortOrder="230" showInDefault="1" showInWebsite="0" showInStore="1">
+                    <label>Test Sending</label>
+                    <button_label>Send Test E-mail</button_label>
+                    <frontend_model>Gabrielqs\TransactionalEmails\Block\Adminhtml\Config\SendTestEmail</frontend_model>
+                    <comment>Make sure you save the configuration before testing it, otherwise your changes will be lost.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

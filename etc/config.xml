@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <system>
+            <!-- TransactionalEmails - Default Values-->
+            <smtp>
+                <provider>sendgrid</provider>
+                <sendgrid_apikey>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</sendgrid_apikey>
+                <test_email_recipient>suporte@gabrielqsecommerce.com</test_email_recipient>
+            </smtp>
+        </system>
+    </default>
+</config>

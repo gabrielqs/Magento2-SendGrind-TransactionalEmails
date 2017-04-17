@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Email/etc/email_templates.xsd">
+    <template id="gabrielqs_transactionalemails_test_template" label="Gabrielqs eCommerce Transactional Emails - Test Email" file="test.html" type="html" module="Gabrielqs_TransactionalEmails" area="frontend"/>
+</config>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Gabrielqs_TransactionalEmails::emails" title="E-mails" translate="title" module="Gabrielqs_TransactionalEmails" sortOrder="200" parent="Magento_Backend::system" resource="Gabrielqs_TransactionalEmails::sent_emails"/>
+        <add id="Gabrielqs_TransactionalEmails::sent_emails" title="Sent E-mails" translate="title" module="Gabrielqs_TransactionalEmails" sortOrder="10" parent="Gabrielqs_TransactionalEmails::emails" action="transactionalemails/sent" resource="Gabrielqs_TransactionalEmails::sent_emails"/>
+    </menu>
+</config>

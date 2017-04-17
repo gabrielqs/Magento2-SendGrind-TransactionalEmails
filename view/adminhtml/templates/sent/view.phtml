@@ -1,0 +1,43 @@
+<?php /** @var Gabrielqs\TransactionalEmails\Block\Adminhtml\Sent\View $block */ ?>
+<table class="admin__table-secondary">
+    <tbody>
+    <tr>
+        <th><?php echo __('Sender'); ?></th>
+        <td><?php echo $block->getFrom(); ?></td>
+    </tr>
+    <tr>
+        <th><?php echo __('Recipient'); ?></th>
+        <td><?php echo $block->getTo(); ?></td>
+    </tr>
+    <?php if($block->getBcc()): ?>
+        <tr>
+            <th><?php echo __('Bcc'); ?></th>
+            <td><?php echo $block->getBcc(); ?></td>
+        </tr>
+    <?php endif; ?>
+    <?php if($block->getOrderId()): ?>
+        <tr>
+            <th><?php echo __('Order'); ?></th>
+            <td><a href="<?php echo $block->getOrderUrl(); ?>"><?php echo $block->getOrderIncrementId(); ?></a></td>
+        </tr>
+    <?php endif; ?>
+    <?php if($block->getCustomerId()): ?>
+    <tr>
+        <th><?php echo __('Customer'); ?></th>
+        <td><a href="<?php echo $block->getCustomerUrl(); ?>"><?php echo $block->getCustomerName(); ?></a></td>
+    </tr>
+    <?php endif; ?>
+    <tr>
+        <th><?php echo __('Subject'); ?></th>
+        <td><?php echo $block->getSubject(); ?></td>
+    </tr>
+    <tr>
+        <th><?php echo __('Status'); ?></th>
+        <td><?php echo $block->getStatus(); ?></td>
+    </tr>
+    <tr>
+        <th><?php echo __('Body'); ?></th>
+        <td><?php echo $block->getBody(); ?></td>
+    </tr>
+    </tbody>
+</table>
