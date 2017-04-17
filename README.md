@@ -1,7 +1,7 @@
 # Magento2-SendGrind-TransactionalEmails
 Enables sending of transactional e-mails through SendGrid.
 
-## Instalação
+## Installation
 Using composer: `composer require gabrielqs/transactional-emails`
 
 ## Configuration
